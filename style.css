@@ -141,18 +141,18 @@ footer{
 footer h2{
    text-align: center;
 }
-.footer a {
+.down a {
     text-decoration: none;
     color: steelblue;
     
 }  
-.footer{
+.down{
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
 }    
 @media only screen and (max-width: 576px) {
-    .heading, .news, .middle-sec, .footer {
+    .heading, .news, .middle-sec, .down {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
@@ -187,7 +187,7 @@ footer h2{
         overflow: hidden;
         white-space: nowrap;
     }
-    .footer a{
+    .down a{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         align-items: center;
@@ -197,12 +197,53 @@ footer h2{
     
 }    
 @media only screen and (max-width: 972px) and (min-width: 577px) {
-    .heading, .news, .middle-sec, .footer {
+    .news, .down{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
+        justify-content: center;   
+        margin-left: 2%;
+        height: 100%;
 
     }
+    .down{
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        
+    }
+    .heading-info{
+        width: 400px;
+        height: 500px;
+    }
    
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        justify-content: end;
+        background-color: white;
+        
+          
+    }
+    .middle-sec{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) ;
+    }
+    nav a{
+        border: 1px solid black;
+    }
     
+   
+    p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .down a{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+
+    }
 }   
