@@ -1,6 +1,6 @@
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: palevioletred;
+    
     
 
 }
@@ -23,6 +23,10 @@ body{
     background-color: red;
     border-radius: 15px;
     border-top: 20px;
+
+}
+.heading-info a:hover {
+    background-color: blue;
     
 }
 .heading-info{
@@ -32,20 +36,30 @@ body{
 .heading-image{
   padding-top: 50px;    
 }
+.heading-image:hover{
+    
+    transition: 1s;
+    transform: rotate(30deg);
+    animation: alternate-reverse;
+}
 h1{
    font-size: 70px;
    margin-bottom: 0;
 }
+
 nav a{
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 10px 24px;
-    background-color: red;
+    background-color: white;
     border-radius: 15px;
     
     margin:0 20px;
     justify-content: center;
    
+}
+nav a:hover{
+    background-color: red;
 }
 nav{
     background-color: black;
@@ -83,11 +97,27 @@ justify-content: center;
 padding-left: 20px;
 
 }
-.news-image img{
+.news-all:hover{
+    position: relative;
+    transform: rotate( 5deg);
+    transition: ease-in-out 1s;
+    animation: alternate;
+}
+.news-image img {
     width: 250px;
     padding: 20px 0;
 
 }
+
+.flag {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.flag img{
+    width: 120px;
+    height: 80px;
+}
+
 .news-details a {
     text-decoration: none;
     border: 1px solid rgba(128, 128, 128, 0.763);
@@ -120,4 +150,59 @@ footer h2{
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
-}           
+}    
+@media only screen and (max-width: 576px) {
+    .heading, .news, .middle-sec, .footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+        height: 100%;
+
+    }
+    
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        justify-content: end;
+        background-color: white;
+        
+          
+    }
+    nav a{
+        border: 1px solid black;
+    }
+    
+    .heading-info{
+        width: 100%;
+        padding-bottom: 30px;
+        
+    }
+    p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .footer a{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+}    
+@media only screen and (max-width: 972px) and (min-width: 577px) {
+    .heading, .news, .middle-sec, .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+
+    }
+   
+    
+}   
